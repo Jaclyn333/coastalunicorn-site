@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maya Raines — Drummer · Composer · Educator</title>
+<meta name="description" content="Maya Raines is a drummer, composer, and educator. Live dates, projects, recordings, and private lessons.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- >>> EASY EDIT: distinctive type pairing — swap these two families to change the whole feel.
+     Headings: Syne (arty/geometric). Body: Space Grotesk (technical/clean). -->
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* ----- DARK EDITORIAL PALETTE (edit to re-theme) ----- */
+  --bg:      #0d0d0f;
+  --panel:   #16161b;
+  --panel2:  #1d1d24;
+  --bone:    #ece7df;   /* primary text */
+  --muted:   #8d8a85;
+  --line:    rgba(236,231,223,.14);
+  --accent:  #cf5a3c;   /* single warm accent */
+  --accent2: #e4895f;
+  --display: 'Syne', sans-serif;
+  --body:    'Space Grotesk', monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--bone);line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:var(--display);line-height:1.0;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.label{font-family:var(--body);text-transform:uppercase;letter-spacing:.32em;font-size:.72rem;
+  font-weight:700;color:var(--accent2)}
+.rule{height:1px;background:var(--line);border:none}
+.btn{display:inline-block;font-family:var(--body);font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+  font-size:.78rem;padding:14px 26px;border-radius:2px;cursor:pointer;border:1px solid var(--bone);
+  background:transparent;color:var(--bone);transition:.18s}
+.btn:hover{background:var(--bone);color:var(--bg)}
+.btn-fill{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-fill:hover{background:var(--accent2);border-color:var(--accent2);color:#1a0f0a}
+
+/* grain overlay */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:40;background:rgba(13,13,15,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.mark{font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:.02em}
+.mark .dot{color:var(--accent)}
+.nlinks{display:flex;gap:30px;align-items:center}
+.nlinks a{font-size:.74rem;text-transform:uppercase;letter-spacing:.18em;font-weight:500;color:#bdb8b0}
+.nlinks a:hover{color:var(--bone)}
+.nlinks .btn{padding:10px 18px}
+.burger{display:none;background:none;border:none;color:var(--bone);font-size:1.5rem;cursor:pointer}
+@media(max-width:880px){.nlinks a:not(.btn){display:none}.burger{display:block}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;z-index:2;padding:70px 0 56px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:end}
+.hero .label{margin-bottom:22px}
+.hero h1{font-size:clamp(3.4rem,9vw,7rem);font-weight:800;text-transform:uppercase}
+.hero .role{font-family:var(--display);font-weight:600;font-size:clamp(1.1rem,2.4vw,1.7rem);
+  color:var(--muted);margin-top:14px;letter-spacing:0}
+.hero .role b{color:var(--bone);font-weight:600}
+.hero p.bio{margin-top:26px;max-width:46ch;color:#c5c0b8;font-size:1.02rem}
+.hero .cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.portrait{aspect-ratio:3/4;border-radius:3px;border:1px solid var(--line);
+  background:linear-gradient(160deg,#2a2a30,#0e0e11 80%);position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;filter:grayscale(1) contrast(1.05)}
+/* >>> EASY EDIT: real photo -> .portrait{background:url('portrait.jpg') center/cover;} */
+.portrait .ph{font-family:var(--display);font-weight:800;font-size:5rem;color:#3a3a42}
+.portrait .credit{position:absolute;bottom:10px;right:12px;font-size:.62rem;letter-spacing:.1em;color:#6d6a65}
+
+/* ---------- section frame ---------- */
+section.blk{position:relative;z-index:2;padding:78px 0;border-bottom:1px solid var(--line)}
+.s-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:38px;flex-wrap:wrap}
+.s-head h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;text-transform:uppercase}
+.s-head a.more{font-size:.74rem;text-transform:uppercase;letter-spacing:.18em;color:var(--accent2);border-bottom:1px solid var(--accent)}
+
+/* ---------- calendar ---------- */
+.cal-row{display:grid;grid-template-columns:120px 1fr auto;gap:24px;align-items:center;
+  padding:20px 0;border-top:1px solid var(--line)}
+.cal-row:last-child{border-bottom:1px solid var(--line)}
+.cal-date{font-family:var(--display);font-weight:700;font-size:1.5rem}
+.cal-date span{display:block;font-family:var(--body);font-size:.7rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-top:2px}
+.cal-info h3{font-family:var(--display);font-weight:700;font-size:1.25rem;margin-bottom:4px}
+.cal-info p{color:var(--muted);font-size:.9rem}
+.cal-venue{text-align:right;color:#bdb8b0;font-size:.9rem}
+.cal-venue b{display:block;color:var(--bone);font-weight:500}
+@media(max-width:680px){.cal-row{grid-template-columns:90px 1fr}.cal-venue{grid-column:2;text-align:left;margin-top:4px}}
+
+/* ---------- projects ---------- */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.proj{background:var(--panel);border:1px solid var(--line);border-radius:3px;overflow:hidden;transition:.2s}
+.proj:hover{border-color:var(--accent);transform:translateY(-4px)}
+.proj .img{aspect-ratio:4/3;background:linear-gradient(150deg,#26262c,#101013);filter:grayscale(1);
+  display:flex;align-items:center;justify-content:center}
+.proj .img .ph{font-family:var(--display);font-weight:800;font-size:2.4rem;color:#3a3a42}
+.proj .body{padding:22px}
+.proj .yr{font-size:.7rem;letter-spacing:.2em;color:var(--accent2);text-transform:uppercase}
+.proj h3{font-family:var(--display);font-weight:700;font-size:1.35rem;margin:6px 0 8px}
+.proj p{color:var(--muted);font-size:.9rem}
+
+/* ---------- listen ---------- */
+.track{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;
+  padding:22px 0;border-top:1px solid var(--line)}
+.track:last-child{border-bottom:1px solid var(--line)}
+.play{width:54px;height:54px;border-radius:50%;border:1px solid var(--bone);background:transparent;color:var(--bone);
+  cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;flex:none;transition:.18s}
+.play:hover,.play.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.track .meta h3{font-family:var(--display);font-weight:700;font-size:1.2rem}
+.track .meta p{color:var(--muted);font-size:.88rem;margin-top:2px;max-width:60ch}
+.wave{display:flex;align-items:center;gap:3px;height:34px}
+.wave i{width:3px;background:var(--muted);border-radius:2px;display:block;animation:none}
+.track.on .wave i{background:var(--accent2);animation:eq .9s ease-in-out infinite alternate}
+@keyframes eq{from{transform:scaleY(.3)}to{transform:scaleY(1)}}
+@media(max-width:680px){.track{grid-template-columns:auto 1fr}.wave{display:none}}
+
+/* ---------- teaching ---------- */
+.teach-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.teach p.intro{color:#c5c0b8;font-size:1.05rem;margin-bottom:22px}
+.teach ul{list-style:none;margin:0 0 26px}
+.teach li{padding:11px 0 11px 26px;position:relative;border-bottom:1px solid var(--line);color:#cfcabf}
+.teach li::before{content:"";position:absolute;left:0;top:18px;width:9px;height:9px;background:var(--accent);border-radius:50%}
+.quotes .q{border-left:2px solid var(--accent);padding:6px 0 6px 22px;margin-bottom:26px}
+.quotes .q p{font-family:var(--display);font-weight:600;font-size:1.15rem;line-height:1.4;color:var(--bone)}
+.quotes .q span{display:block;margin-top:8px;color:var(--muted);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+
+/* ---------- footer ---------- */
+footer{position:relative;z-index:2;padding:60px 0 34px;background:var(--panel)}
+.f-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-end;margin-bottom:34px}
+.f-top h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem,6vw,3.6rem);text-transform:uppercase}
+.socials{display:flex;gap:14px;flex-wrap:wrap}
+.socials a{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;border:1px solid var(--line);
+  padding:10px 16px;border-radius:2px;color:#bdb8b0}
+.socials a:hover{border-color:var(--accent);color:var(--bone)}
+.f-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--line);
+  color:#6d6a65;font-size:.74rem;letter-spacing:.06em}
+
+/* ---------- sticky mobile bar ---------- */
+.mobar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:45;background:var(--panel2);
+  border-top:1px solid var(--line);padding:10px;gap:10px}
+.mobar .btn{flex:1;text-align:center}
+@media(max-width:880px){.mobar{display:flex}body{padding-bottom:68px}}
+
+/* ---------- booking modal ---------- */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(5,5,7,.78);z-index:90;align-items:center;justify-content:center;padding:18px}
+.modal-bg.open{display:flex}
+.modal{background:var(--panel2);border:1px solid var(--line);border-radius:4px;max-width:440px;width:100%;padding:34px;position:relative;max-height:92vh;overflow:auto}
+.modal h3{font-family:var(--display);font-weight:800;font-size:1.5rem;text-transform:uppercase;margin-bottom:4px}
+.modal p.lead{color:var(--muted);margin-bottom:16px;font-size:.92rem}
+.modal label{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--accent2);margin:14px 0 5px}
+.modal input,.modal select{width:100%;padding:13px;background:var(--bg);border:1px solid var(--line);border-radius:2px;color:var(--bone);font-family:var(--body);font-size:1rem}
+.modal input:focus,.modal select:focus{outline:none;border-color:var(--accent)}
+.modal .btn{width:100%;margin-top:22px}
+.close{position:absolute;top:12px;right:16px;background:none;border:none;color:var(--muted);font-size:1.7rem;cursor:pointer}
+.hp{position:absolute;left:-9999px}
+.success{display:none;text-align:center;padding:12px 0}
+.success.show{display:block}
+.success .ck{width:64px;height:64px;border-radius:50%;background:var(--accent);color:#fff;font-size:1.9rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+
+@media(max-width:880px){.hero-grid,.teach-grid{grid-template-columns:1fr;gap:34px}.portrait{max-width:360px}
+  .proj-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.proj-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- ===== nav ===== -->
+<nav>
+  <div class="wrap nav-in">
+    <!-- EDIT: artist name --><div class="mark">MAYA RAINES<span class="dot">.</span></div>
+    <div class="nlinks">
+      <a href="#shows">Shows</a>
+      <a href="#projects">Projects</a>
+      <a href="#listen">Listen</a>
+      <a href="#teaching">Teaching</a>
+      <button class="btn" onclick="openBooking()">Book a Lesson</button>
+    </div>
+    <button class="burger" onclick="document.getElementById('teaching').scrollIntoView()">&#9776;</button>
+  </div>
+</nav>
+
+<!-- ===== hero ===== -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="label">Brooklyn · Drums · Composition</div>
+      <!-- EDIT: name + role -->
+      <h1>Maya<br>Raines</h1>
+      <div class="role"><b>Drummer.</b> <b>Composer.</b> <b>Educator.</b></div>
+      <p class="bio">Maya Raines is a drummer and composer working across jazz, free improvisation, and chamber music — building long-form pieces that move between stillness and momentum. Off the stage, she teaches students of every level.</p>
+      <div class="cta">
+        <a href="#projects" class="btn btn-fill">View Projects</a>
+        <a href="#listen" class="btn">Listen</a>
+        <button class="btn" onclick="openBooking()">Study With Maya</button>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="ph">MR</div>
+      <div class="credit">Photo: placeholder</div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== shows / calendar ===== -->
+<section class="blk" id="shows">
+  <div class="wrap">
+    <div class="s-head"><h2>Calendar</h2><a class="more" href="#">All dates &rarr;</a></div>
+    <!-- EDIT: upcoming shows -->
+    <div class="cal-row">
+      <div class="cal-date">JUL 12<span>Sat</span></div>
+      <div class="cal-info"><h3>Maya Raines Quartet</h3><p>Original long-form set with the full quartet.</p></div>
+      <div class="cal-venue"><b>The Owl Music Parlor</b>Brooklyn, NY · 8:00 PM</div>
+    </div>
+    <div class="cal-row">
+      <div class="cal-date">JUL 19<span>Sat</span></div>
+      <div class="cal-info"><h3>Duo: Raines / Okafor</h3><p>Drums &amp; piano improvisation evening.</p></div>
+      <div class="cal-venue"><b>Ibeam</b>Brooklyn, NY · 7:00 PM</div>
+    </div>
+    <div class="cal-row">
+      <div class="cal-date">AUG 03<span>Sun</span></div>
+      <div class="cal-info"><h3>Chamber Premiere — "Tidewater"</h3><p>New piece for strings &amp; percussion.</p></div>
+      <div class="cal-venue"><b>Roulette</b>Brooklyn, NY · 8:00 PM</div>
+    </div>
+    <div class="cal-row">
+      <div class="cal-date">AUG 22<span>Fri</span></div>
+      <div class="cal-info"><h3>Trio Residency — Night 1</h3><p>Three nights of new material.</p></div>
+      <div class="cal-venue"><b>Bar Bayeux</b>Brooklyn, NY · 9:00 PM</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== projects ===== -->
+<section class="blk" id="projects">
+  <div class="wrap">
+    <div class="s-head"><h2>Projects</h2><a class="more" href="#">See all &rarr;</a></div>
+    <div class="proj-grid">
+      <!-- EDIT: projects -->
+      <div class="proj"><div class="img"><div class="ph">01</div></div>
+        <div class="body"><div class="yr">2026 · Quartet</div><h3>Tidewater Suite</h3>
+        <p>A four-movement work for drums, reeds, piano, and bass, shaped around themes of memory and return.</p></div></div>
+      <div class="proj"><div class="img"><div class="ph">02</div></div>
+        <div class="body"><div class="yr">2018–present · Trio</div><h3>Halcyon</h3>
+        <p>A co-led trio exploring patient, minimal material that expands and contracts over time.</p></div></div>
+      <div class="proj"><div class="img"><div class="ph">03</div></div>
+        <div class="body"><div class="yr">2025 · Solo</div><h3>Field Notes</h3>
+        <p>Solo percussion textures recorded live, between composition and improvisation.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== listen ===== -->
+<section class="blk" id="listen">
+  <div class="wrap">
+    <div class="s-head"><h2>Listen</h2><a class="more" href="#">Full discography &rarr;</a></div>
+    <!-- >>> EASY EDIT: these players are visual demos. To make real, embed
+         Bandcamp/Spotify/SoundCloud iframes or HTML5 <audio src> per track. -->
+    <div class="track" onclick="togglePlay(this)">
+      <button class="play">&#9658;</button>
+      <div class="meta"><h3>Tidewater — Movement II</h3><p>A nocturnal loop drifting between stillness and unease.</p></div>
+      <div class="wave"><i style="height:40%"></i><i style="height:70%"></i><i style="height:30%"></i><i style="height:90%"></i><i style="height:55%"></i><i style="height:75%"></i><i style="height:40%"></i><i style="height:85%"></i><i style="height:50%"></i></div>
+    </div>
+    <div class="track" onclick="togglePlay(this)">
+      <button class="play">&#9658;</button>
+      <div class="meta"><h3>Halcyon — Sequestration</h3><p>A slow-burning study in stasis and transformation.</p></div>
+      <div class="wave"><i style="height:60%"></i><i style="height:35%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:65%"></i><i style="height:30%"></i><i style="height:90%"></i><i style="height:50%"></i><i style="height:70%"></i></div>
+    </div>
+    <div class="track" onclick="togglePlay(this)">
+      <button class="play">&#9658;</button>
+      <div class="meta"><h3>Field Notes — What Was</h3><p>Groove, counterpoint, and free interplay blurring together.</p></div>
+      <div class="wave"><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:70%"></i><i style="height:35%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:45%"></i><i style="height:75%"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== teaching ===== -->
+<section class="blk" id="teaching">
+  <div class="wrap">
+    <div class="s-head"><h2>Teaching</h2></div>
+    <div class="teach-grid">
+      <div class="teach">
+        <p class="intro">Maya offers private lessons in drums &amp; percussion, composition, and music theory — grounded in curiosity, fundamentals, and sound. All levels welcome, from first-time beginners to working musicians.</p>
+        <!-- EDIT: lesson offerings + price -->
+        <ul>
+          <li>Drums &amp; Percussion — technique, time, and vocabulary</li>
+          <li>Composition — writing for small ensembles and beyond</li>
+          <li>Music Theory — ear training and harmony, made approachable</li>
+          <li>In-person in Brooklyn or online worldwide</li>
+        </ul>
+        <button class="btn btn-fill" onclick="openBooking()">Book a Trial Lesson</button>
+      </div>
+      <div class="quotes">
+        <!-- EDIT: real testimonials -->
+        <div class="q"><p>"I started as an absolute beginner and can't believe how far I've come. Maya is the best."</p><span>— Student, 1.5 years</span></div>
+        <div class="q"><p>"She makes complex ideas approachable — I've never been taught music this way before."</p><span>— Adult student</span></div>
+        <div class="q"><p>"A thorough, focused, and compassionate teacher who meets you exactly where you are."</p><span>— Parent</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <h2>Let's<br>work together</h2>
+      <div class="socials">
+        <!-- EDIT: links -->
+        <a href="#">Bandcamp</a><a href="#">Apple Music</a><a href="#">Spotify</a>
+        <a href="#">Instagram</a><a href="#" onclick="openBooking();return false;">Lessons</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Maya Raines</span>
+      <span>Brooklyn, NY · hello@mayaraines.com</span>
+      <span>Site by Coastal Unicorn &#127754;</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== sticky mobile bar ===== -->
+<div class="mobar">
+  <a href="#listen" class="btn">Listen</a>
+  <button class="btn btn-fill" onclick="openBooking()">Book a Lesson</button>
+</div>
+
+<!-- ===== booking modal ===== -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <button class="close" onclick="closeBooking()">&times;</button>
+    <div id="formView">
+      <h3>Book a lesson</h3>
+      <p class="lead">Send your details and Maya will reply to set a time.</p>
+      <form id="bookForm" onsubmit="return submitBooking(event)">
+        <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off">
+        <label>Name</label>
+        <input type="text" name="name" required placeholder="Your name">
+        <label>Email</label>
+        <input type="email" name="email" required placeholder="you@email.com">
+        <label>Focus</label>
+        <select name="focus">
+          <option>Drums &amp; Percussion</option>
+          <option>Composition</option>
+          <option>Music Theory</option>
+          <option>Not sure yet</option>
+        </select>
+        <label>In person or online?</label>
+        <select name="mode"><option>In person (Brooklyn)</option><option>Online</option></select>
+        <button type="submit" class="btn btn-fill">Request a Time</button>
+      </form>
+    </div>
+    <div class="success" id="successView">
+      <div class="ck">&#10003;</div>
+      <h3>Message sent</h3>
+      <p style="color:var(--muted);margin-top:8px">Thanks — Maya will be in touch soon to set up your lesson.</p>
+      <button class="btn btn-fill" style="margin-top:18px" onclick="closeBooking()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* listen players — visual demo only. Replace with real audio/embeds (see note). */
+function togglePlay(row){
+  var on=row.classList.contains('on');
+  document.querySelectorAll('.track').forEach(t=>{t.classList.remove('on');t.querySelector('.play').classList.remove('on');t.querySelector('.play').innerHTML='&#9658;';});
+  if(!on){row.classList.add('on');var b=row.querySelector('.play');b.classList.add('on');b.innerHTML='&#10073;&#10073;';}
+}
+/* booking */
+var modal=document.getElementById('modalBg');
+function openBooking(){modal.classList.add('open');document.getElementById('formView').style.display='block';document.getElementById('successView').classList.remove('show');}
+function closeBooking(){modal.classList.remove('open');document.getElementById('bookForm').reset();}
+modal.addEventListener('click',e=>{if(e.target===modal)closeBooking();});
+function submitBooking(e){
+  e.preventDefault();
+  if(e.target.company.value)return false;
+  /* >>> GO LIVE: send to client's email/booking tool. >>> ADS: fire Lead event here. */
+  document.getElementById('formView').style.display='none';
+  document.getElementById('successView').classList.add('show');
+  return false;
+}
+</script>
+</body>
+</html>

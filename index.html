@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coastal Unicorn | Brands, Websites &amp; AI Automation for Small Business</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1F3A; --navy2:#142A4A; --gold:#C7A05A; --gold2:#E4C98A;
+    --teal:#18A8BE; --aqua:#63D5E6; --white:#FFFFFF; --ivory:#F8F7F4;
+    --graphite:#222831; --line:rgba(199,160,90,.22); --muted:#9fb0c4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Montserrat',-apple-system,sans-serif;color:#dfe7f0;background:var(--navy);line-height:1.7;}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 26px;}
+  .gold-grad{background:linear-gradient(120deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .teal-t{color:var(--aqua);}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(120deg,var(--gold2),var(--gold));color:#1a1206;font-weight:700;padding:15px 30px;border-radius:6px;font-size:13.5px;letter-spacing:1px;text-transform:uppercase;transition:.2s;border:none;cursor:pointer;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(199,160,90,.3);}
+  .btn-ghost{background:transparent;border:1px solid var(--gold);color:var(--gold2);}
+  .btn-ghost:hover{background:rgba(199,160,90,.1);box-shadow:none;}
+  .eyebrow{color:var(--gold);font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:60;background:rgba(11,31,58,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:700;letter-spacing:3px;}
+  .brand .c{color:var(--gold2);} .brand .u{color:var(--aqua);}
+  .navlinks{display:flex;gap:30px;align-items:center;}
+  .navlinks a{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#c6d2e0;}
+  .navlinks a:hover{color:var(--gold2);}
+  @media(max-width:860px){.navlinks a:not(.cta){display:none;}}
+
+  /* HERO */
+  header{position:relative;overflow:hidden;border-bottom:1px solid var(--line);}
+  header::before{content:"";position:absolute;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(24,168,190,.16),transparent 62%);top:-180px;right:-120px;}
+  header::after{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(199,160,90,.13),transparent 62%);bottom:-240px;left:-160px;}
+  header .wrap{position:relative;z-index:2;display:flex;align-items:center;gap:40px;padding:70px 26px 78px;flex-wrap:wrap;}
+  .hero-text{flex:1.15;min-width:320px;}
+  .hero-text h1{font-size:62px;line-height:1.04;font-weight:700;color:#fff;margin:18px 0 0;}
+  .hero-text p.sub{font-size:18px;color:var(--muted);margin-top:22px;max-width:540px;}
+  .hero-cta{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;}
+  .hero-logo{flex:.85;min-width:300px;text-align:center;}
+  .hero-logo img{width:100%;max-width:420px;border-radius:50%;}
+  .hero-logo .ring{width:100%;max-width:420px;aspect-ratio:1;margin:0 auto;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,var(--navy2),var(--navy));}
+  .hero-logo .ring .ph{font-family:'Cormorant Garamond',serif;color:var(--muted);font-size:15px;letter-spacing:2px;padding:0 30px;}
+
+  /* TAGLINE STRIP */
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--navy2);}
+  .strip .wrap{padding:20px 26px;text-align:center;}
+  .strip span{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;letter-spacing:8px;text-transform:uppercase;}
+
+  /* BENEFITS */
+  .benefits{padding:54px 0;}
+  .benefits .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+  .ben{display:flex;gap:16px;align-items:flex-start;padding:6px 10px;}
+  .ben .ic{flex:none;width:46px;height:46px;}
+  .ben h4{font-family:'Montserrat';font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold2);}
+  .ben p{font-size:14px;color:var(--muted);margin-top:4px;}
+
+  /* SECTION */
+  section{padding:84px 0;}
+  .stitle{text-align:center;max-width:680px;margin:0 auto 54px;}
+  .stitle h2{font-size:44px;color:#fff;font-weight:700;margin-top:10px;}
+  .stitle p{color:var(--muted);margin-top:14px;font-size:17px;}
+
+  /* SERVICES */
+  .svcs{background:linear-gradient(180deg,var(--navy),var(--navy2));border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .svcs .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+  .svc{background:rgba(20,42,74,.6);border:1px solid var(--line);border-radius:14px;padding:38px 32px;transition:.25s;}
+  .svc:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 24px 50px rgba(0,0,0,.4);}
+  .svc .ic{width:60px;height:60px;margin-bottom:20px;}
+  .svc h3{font-size:28px;color:#fff;font-weight:700;}
+  .svc .kicker{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:4px;}
+  .svc p{color:var(--muted);font-size:15px;margin-top:14px;}
+  .svc ul{list-style:none;margin-top:16px;}
+  .svc li{font-size:14px;color:#cdd8e6;padding:5px 0;display:flex;gap:10px;align-items:flex-start;}
+  .svc li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);margin-top:8px;flex:none;}
+
+  /* VALUE */
+  .value .row{display:flex;gap:56px;align-items:center;flex-wrap:wrap;}
+  .value .col{flex:1;min-width:300px;}
+  .value h2{font-size:42px;color:#fff;font-weight:700;line-height:1.1;}
+  .value p{color:var(--muted);margin-top:18px;font-size:16px;}
+  .value .stat-row{display:flex;gap:34px;margin-top:30px;flex-wrap:wrap;}
+  .value .stat b{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:700;display:block;}
+  .value .stat span{font-size:13px;color:var(--muted);letter-spacing:1px;}
+  .quote-card{background:var(--navy2);border:1px solid var(--line);border-radius:16px;padding:38px;}
+  .quote-card .q{font-family:'Cormorant Garamond',serif;font-size:26px;font-style:italic;color:#fff;line-height:1.4;}
+  .quote-card .a{margin-top:18px;color:var(--gold2);font-weight:600;font-size:14px;letter-spacing:1px;}
+
+  /* PROCESS */
+  .proc{background:var(--navy2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .proc .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+  .step{text-align:center;}
+  .step .n{width:64px;height:64px;margin:0 auto 16px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--gold2);background:rgba(199,160,90,.06);}
+  .step h4{font-size:22px;color:#fff;font-weight:700;}
+  .step p{color:var(--muted);font-size:14.5px;margin-top:8px;}
+
+  /* WORK */
+  .workgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:24px;max-width:900px;margin:0 auto;align-items:stretch;}
+  .workcard{background:var(--navy2);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;}
+  .workcard .top{padding:38px;text-align:center;border-bottom:1px solid var(--line);}
+  .workcard .top .e{font-size:42px;}
+  .workcard .top h3{font-size:28px;color:#fff;font-weight:700;margin-top:6px;}
+  .workcard .top p{color:var(--muted);margin-top:6px;font-size:14px;}
+  .workcard .meta{display:flex;flex-direction:column;gap:14px;padding:24px 32px;flex:1;}
+  .workcard .meta b{display:block;color:var(--gold2);font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
+  .workcard .meta div{font-size:14px;color:var(--muted);}
+  .workcard .demo{padding:0 32px 30px;}
+  .workcard .demo .btn{width:100%;justify-content:center;}
+
+  /* PRICING */
+  .pricing{background:linear-gradient(180deg,var(--navy2),var(--navy));border-top:1px solid var(--line);}
+  .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:stretch;}
+  .tier{background:rgba(20,42,74,.55);border:1px solid var(--line);border-radius:16px;padding:34px 30px;display:flex;flex-direction:column;}
+  .tier.feat{border-color:var(--gold);background:rgba(199,160,90,.07);box-shadow:0 24px 50px rgba(0,0,0,.4);}
+  .tier .badge{display:inline-block;background:linear-gradient(120deg,var(--gold2),var(--gold));color:#1a1206;font-size:10.5px;font-weight:700;letter-spacing:2px;padding:5px 14px;border-radius:20px;margin-bottom:14px;align-self:flex-start;}
+  .tier h3{font-size:23px;color:#fff;font-weight:700;}
+  .tier .price{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:700;margin:6px 0 2px;}
+  .tier .desc{font-size:13.5px;color:var(--muted);margin-bottom:18px;min-height:38px;}
+  .tier ul{list-style:none;flex:1;margin-bottom:22px;}
+  .tier li{font-size:14px;color:#cdd8e6;padding:7px 0;border-bottom:1px solid rgba(199,160,90,.12);display:flex;gap:10px;}
+  .tier li::before{content:"\2713";color:var(--teal);font-weight:700;}
+  .tier .btn{width:100%;justify-content:center;}
+  .addon{text-align:center;color:var(--muted);font-size:14px;margin-top:30px;}
+  .addon b{color:var(--gold2);}
+
+  /* CONTACT */
+  .contact{text-align:center;}
+  .cbox{max-width:840px;margin:0 auto;background:linear-gradient(140deg,var(--navy2),#0d2342);border:1px solid var(--gold);border-radius:22px;padding:60px 34px;position:relative;overflow:hidden;}
+  .cbox h2{font-size:46px;color:#fff;font-weight:700;}
+  .cbox p{color:var(--muted);margin:14px auto 28px;max-width:540px;font-size:16px;}
+  .cbox .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .cbox .em{margin-top:22px;font-size:14px;color:var(--muted);}
+  .cbox .em a{color:var(--gold2);font-weight:600;}
+
+  /* FOOTER */
+  footer{background:#081729;border-top:1px solid var(--line);padding:54px 0 28px;}
+  footer .cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;}
+  footer .col{min-width:190px;}
+  footer h4{color:var(--gold2);font-family:'Cormorant Garamond',serif;font-size:19px;margin-bottom:13px;}
+  footer a,footer p{color:var(--muted);font-size:14px;display:block;margin-bottom:8px;}
+  footer a:hover{color:var(--gold2);}
+  .copy{border-top:1px solid var(--line);margin-top:34px;padding-top:18px;text-align:center;font-size:12.5px;color:#6a7d92;letter-spacing:1px;}
+  @media(max-width:860px){.hero-text h1{font-size:42px;} .stitle h2{font-size:32px;} .strip span{font-size:18px;letter-spacing:4px;} .cbox h2{font-size:32px;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="brand"><span class="c">COASTAL</span> <span class="u">UNICORN</span></a>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="https://calendar.app.google/uJRzm8ayiA19cbyP6" target="_blank" rel="noopener" class="cta"><span class="btn" style="padding:10px 20px;">Book a Call</span></a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="eyebrow">Branding · Websites · AI Automation · Panama City, FL</span>
+      <h1>Your business deserves <span class="teal-t">more</span> than just a website.</h1>
+      <p class="sub">We build brands, websites, and AI automations that help small businesses attract more customers &mdash; and spend less time on repetitive work.</p>
+      <div class="hero-cta">
+        <a href="https://calendar.app.google/uJRzm8ayiA19cbyP6" target="_blank" rel="noopener" class="btn">Book a Free Strategy Call &rarr;</a>
+        <a href="#work" class="btn btn-ghost">View Our Work &rarr;</a>
+      </div>
+    </div>
+    <div class="hero-logo">
+      <img src="coastal-unicorn-logo.png" alt="Coastal Unicorn"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div class="ring" style="display:none;"><div class="ph">Save your logo as<br><b>coastal-unicorn-logo.png</b><br>in this folder</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="strip"><div class="wrap"><span class="gold-grad">Build.</span> <span class="teal-t">Grow.</span> <span class="gold-grad">Automate.</span></div></div>
+
+<div class="benefits"><div class="wrap"><div class="grid">
+  <div class="ben">
+    <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#C7A05A" stroke-width="2"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="2.5" fill="#18A8BE" stroke="none"/></svg>
+    <div><h4>More Leads</h4><p>Attract the right customers.</p></div>
+  </div>
+  <div class="ben">
+    <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#C7A05A" stroke-width="2"><rect x="9" y="11" width="30" height="28" rx="3"/><path d="M9 19h30M17 8v6M31 8v6"/><circle cx="18" cy="28" r="1.6" fill="#18A8BE" stroke="none"/><circle cx="24" cy="28" r="1.6" fill="#18A8BE" stroke="none"/><circle cx="30" cy="28" r="1.6" fill="#18A8BE" stroke="none"/></svg>
+    <div><h4>More Bookings</h4><p>Convert visitors into paying clients.</p></div>
+  </div>
+  <div class="ben">
+    <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#C7A05A" stroke-width="2"><rect x="13" y="16" width="22" height="18" rx="4"/><path d="M24 16v-5M24 11a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" fill="#0B1F3A"/><circle cx="19" cy="25" r="1.8" fill="#18A8BE" stroke="none"/><circle cx="29" cy="25" r="1.8" fill="#18A8BE" stroke="none"/><path d="M8 24v4M40 24v4"/></svg>
+    <div><h4>Less Busywork</h4><p>Automate follow-ups, reminders &amp; more.</p></div>
+  </div>
+  <div class="ben">
+    <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="#C7A05A" stroke-width="2"><path d="M9 33l9-9 6 6 12-13"/><path d="M30 17h7v7" stroke="#18A8BE"/><path d="M9 39h30"/></svg>
+    <div><h4>More Growth</h4><p>Systems that scale with your business.</p></div>
+  </div>
+</div></div></div>
+
+<section class="svcs" id="services">
+  <div class="wrap">
+    <div class="stitle">
+      <span class="eyebrow">What We Do</span>
+      <h2>Brand. Build. Automate.</h2>
+      <p>Three pillars that turn a small local business into a polished, booked-out brand.</p>
+    </div>
+    <div class="grid">
+      <div class="svc">
+        <svg class="ic" viewBox="0 0 60 60" fill="none" stroke="#C7A05A" stroke-width="2"><path d="M14 44l4-12L38 12a4 4 0 016 6L24 38l-12 4z"/><path d="M34 16l6 6" stroke="#18A8BE"/></svg>
+        <div class="kicker">Brand</div>
+        <h3>Branding</h3>
+        <p>Memorable brands that build trust and make you look like the obvious choice.</p>
+        <ul><li>Logo &amp; visual identity</li><li>Colors, fonts &amp; brand kit</li><li>Social profile design</li></ul>
+      </div>
+      <div class="svc">
+        <svg class="ic" viewBox="0 0 60 60" fill="none" stroke="#C7A05A" stroke-width="2"><rect x="10" y="12" width="40" height="28" rx="3"/><path d="M10 33h40M24 46h12M30 40v6" stroke="#18A8BE"/></svg>
+        <div class="kicker">Build</div>
+        <h3>Websites</h3>
+        <p>High-converting, mobile-first websites with online booking, designed to turn visitors into customers.</p>
+        <ul><li>Custom website + booking</li><li>Get found on Google</li><li>Live in days, not months</li></ul>
+      </div>
+      <div class="svc">
+        <svg class="ic" viewBox="0 0 60 60" fill="none" stroke="#C7A05A" stroke-width="2"><rect x="16" y="20" width="28" height="22" rx="5"/><path d="M30 20v-6M30 14a3 3 0 100-6 3 3 0 000 6z"/><circle cx="24" cy="31" r="2.2" fill="#18A8BE" stroke="none"/><circle cx="36" cy="31" r="2.2" fill="#18A8BE" stroke="none"/><path d="M11 30v5M49 30v5"/></svg>
+        <div class="kicker">Automate</div>
+        <h3>AI Automation</h3>
+        <p>Smart automations that save time, follow up with leads, and keep customers coming back.</p>
+        <ul><li>Instant replies &amp; reminders</li><li>Lead follow-up sequences</li><li>Review &amp; rebooking flows</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="value" id="about">
+  <div class="wrap">
+    <div class="row">
+      <div class="col">
+        <span class="eyebrow">Why Coastal Unicorn</span>
+        <h2>We don't just make it pretty. We make it <span class="gold-grad">work.</span></h2>
+        <p>Most small businesses are stuck taking bookings in their DMs, invisible on Google, and buried in repetitive admin. We fix all three &mdash; a brand that earns trust, a website that books customers, and automation that runs the busywork for you.</p>
+        <div class="stat-row">
+          <div class="stat"><b class="gold-grad">1 Day</b><span>To go live</span></div>
+          <div class="stat"><b class="teal-t">3-in-1</b><span>Brand · Web · Automation</span></div>
+          <div class="stat"><b class="gold-grad">Local</b><span>Gulf Coast focused</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="quote-card">
+          <div class="q">&ldquo;Stop losing customers to a missed DM. Start looking like the business you're meant to be.&rdquo;</div>
+          <div class="a">&mdash; The Coastal Unicorn promise</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proc" id="process">
+  <div class="wrap">
+    <div class="stitle">
+      <span class="eyebrow">How It Works</span>
+      <h2>Simple from day one</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h4>Free Strategy Call</h4><p>We learn your business and map exactly what you need &mdash; no cost, no pressure.</p></div>
+      <div class="step"><div class="n">2</div><h4>We Build It</h4><p>Brand, website, booking, and automations &mdash; done for you, often within days.</p></div>
+      <div class="step"><div class="n">3</div><h4>You Grow</h4><p>Customers book themselves, follow-ups run automatically, and we keep it optimized.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="stitle">
+      <span class="eyebrow">Recent Work</span>
+      <h2>Built to get businesses booked</h2>
+    </div>
+    <div class="workgrid">
+      <div class="workcard">
+        <div class="top">
+          <div class="e">&#127911;</div>
+          <h3>Maya Raines</h3>
+          <p>Drummer, composer &amp; educator &middot; Editorial artist site</p>
+        </div>
+        <div class="meta">
+          <div><b>The Win</b>A bold, gallery-style portfolio with shows, music &amp; lesson booking.</div>
+          <div><b>Built In</b>Under a day, mobile-first with a striking type-led design.</div>
+          <div><b>Includes</b>Tour calendar, project grid, audio players &amp; booking.</div>
+        </div>
+        <div class="demo">
+          <a href="examples/artist-music/" target="_blank" rel="noopener" class="btn">View Live Demo &rarr;</a>
+        </div>
+      </div>
+      <div class="workcard">
+        <div class="top">
+          <div class="e">&#10047;</div>
+          <h3>Lash &amp; Co.</h3>
+          <p>Eyelash &amp; brow studio &middot; Panama City Beach, FL</p>
+        </div>
+        <div class="meta">
+          <div><b>The Win</b>A luxury lash site built to convert paid-ad traffic into booked appointments.</div>
+          <div><b>Built In</b>Under a day, mobile-first with click-to-book.</div>
+          <div><b>Includes</b>Online booking, services menu &amp; review section.</div>
+        </div>
+        <div class="demo">
+          <a href="examples/lash-and-co/" target="_blank" rel="noopener" class="btn">View Live Demo &rarr;</a>
+        </div>
+      </div>
+      <div class="workcard">
+        <div class="top">
+          <div class="e">&#128054;</div>
+          <h3>Salty Paws</h3>
+          <p>Boutique pet grooming &middot; Panama City Beach, FL</p>
+        </div>
+        <div class="meta">
+          <div><b>The Win</b>A warm studio-salon site that turns browsers into booked grooming appointments.</div>
+          <div><b>Built In</b>Under a day, mobile-first with online booking.</div>
+          <div><b>Includes</b>Services, photo gallery, hours/location &amp; booking.</div>
+        </div>
+        <div class="demo">
+          <a href="examples/pet-grooming/" target="_blank" rel="noopener" class="btn">View Live Demo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="stitle">
+      <span class="eyebrow">Simple Pricing</span>
+      <h2>Pick your starting point</h2>
+      <p>One-time setup, no long contracts. Add a care plan only if you want us to keep it running.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Smart Site</h3>
+        <div class="price gold-grad">$99</div>
+        <div class="desc">A one-page site to get online fast.</div>
+        <ul><li>1-page mobile site</li><li>Tap-to-call &amp; directions</li><li>Booking link added</li><li>Live in a day</li></ul>
+        <a href="https://calendar.app.google/uJRzm8ayiA19cbyP6" target="_blank" rel="noopener" class="btn btn-ghost">Start Here</a>
+      </div>
+      <div class="tier feat">
+        <span class="badge">Most Popular</span>
+        <h3>Complete Setup</h3>
+        <div class="price gold-grad">$497</div>
+        <div class="desc">Brand polish + website + booking + automation.</div>
+        <ul><li>Multi-page website</li><li>Online booking system</li><li>Instant replies &amp; reminders</li><li>Social profile design</li></ul>
+        <a href="https://calendar.app.google/uJRzm8ayiA19cbyP6" target="_blank" rel="noopener" class="btn">Get Started</a>
+      </div>
+      <div class="tier">
+        <h3>Website</h3>
+        <div class="price gold-grad">$297</div>
+        <div class="desc">A real web presence, done right.</div>
+        <ul><li>Up to 3 pages</li><li>Mobile-friendly &amp; fast</li><li>Your own domain</li><li>Contact &amp; booking</li></ul>
+        <a href="https://calendar.app.google/uJRzm8ayiA19cbyP6" target="_blank" rel="noopener" class="btn btn-ghost">Choose Website</a>
+      </div>
+    </div>
+    <div class="addon"><b>Add-ons:</b> Full branding package &middot; Get on Google +$249 &middot; AI automations from +$199 &nbsp;|&nbsp; <b>Care plan</b> from $59/mo</div>
+  </div>
+</section>
+
+<section class="contact" id="contact

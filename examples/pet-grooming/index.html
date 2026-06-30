@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salty Paws Pet Grooming — Boutique Dog Grooming in Panama City Beach</title>
+<meta name="description" content="Salty Paws is a private, appointment-only pet grooming studio in Panama City Beach. Stress-free grooming for all breeds. Book your appointment today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- >>> EASY EDIT: warm boutique type pairing — swap to change the feel.
+     Headings: Fraunces (characterful serif). Body: Nunito Sans (friendly sans). -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* ----- WARM BOUTIQUE PET-SALON PALETTE (edit to re-theme) ----- */
+  --brand:    #5a8f6e;   /* sage green */
+  --brand2:   #3f6e52;   /* deep green */
+  --brand-dark:#2c4a39;  /* darkest headings */
+  --cream:    #fdf8f1;   /* page background */
+  --cream2:   #f3ead9;   /* alt section background */
+  --accent:   #e07a5f;   /* warm coral CTA */
+  --accent-d: #c8634a;
+  --ink:      #3a4540;
+  --muted:    #7d8a82;
+  --img1:     #d8e8dd;   /* photo placeholder light */
+  --img2:     #6ea585;   /* photo placeholder dark */
+  --radius:   18px;
+  --shadow:   0 12px 34px rgba(44,74,57,.15);
+  --display:  'Fraunces', Georgia, serif;
+  --body:     'Nunito Sans', -apple-system, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.6}
+h1,h2,h3,.serif{font-family:var(--display)}
+h1,h2,h3{color:var(--brand-dark);line-height:1.12}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.btn{display:inline-block;border:none;cursor:pointer;font-weight:700;letter-spacing:.4px;text-transform:uppercase;
+  font-size:.88rem;padding:15px 30px;border-radius:40px;text-align:center;transition:.18s;font-family:var(--body)}
+.btn-cta{background:var(--accent);color:#fff;box-shadow:0 8px 22px rgba(224,122,95,.34)}
+.btn-cta:hover{transform:translateY(-2px);background:var(--accent-d)}
+.btn-green{background:var(--brand);color:#fff}
+.btn-green:hover{transform:translateY(-2px);background:var(--brand2)}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:.78rem;font-weight:700;color:var(--accent-d)}
+.center{text-align:center}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(253,248,241,.95);backdrop-filter:blur(10px);border-bottom:1px solid #ece0cd}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
+.logo{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--brand-dark)}
+.logo .paw{color:var(--accent)}
+nav.main{display:flex;gap:26px;align-items:center}
+nav.main a{font-size:.95rem;font-weight:600;color:var(--ink)}
+nav.main a:hover{color:var(--brand)}
+.bar .btn{padding:11px 22px}
+.burger{display:none;font-size:1.6rem;background:none;border:none;cursor:pointer;color:var(--brand-dark)}
+@media(max-width:900px){nav.main{display:none}.burger{display:block}}
+
+/* announcement */
+.announce{background:var(--brand-dark);color:#fff;text-align:center;font-size:.92rem;padding:11px 16px}
+.announce b{color:#f0c98a}
+.announce a{color:#fff;text-decoration:underline;font-weight:700}
+
+/* hero */
+.hero{background:linear-gradient(120deg,var(--cream) 55%,var(--cream2));overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:60px 0}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid #e6dcc8;border-radius:40px;
+  padding:8px 16px 8px 10px;box-shadow:0 6px 16px rgba(44,74,57,.08);margin-bottom:20px}
+.badge .seal{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+.badge span{font-weight:700;font-size:.82rem;color:var(--brand-dark);letter-spacing:.3px}
+.badge span small{display:block;color:var(--muted);font-weight:600;font-size:.7rem;letter-spacing:1px;text-transform:uppercase}
+.hero h1{font-size:3.2rem;margin-bottom:16px}
+.hero .lead{font-size:1.35rem;color:var(--brand);font-family:var(--display);font-style:italic;margin-bottom:14px}
+.hero p.body{font-size:1.12rem;color:var(--muted);margin-bottom:26px;max-width:44ch}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.rating{display:flex;align-items:center;gap:10px;margin-top:22px;font-weight:600;color:var(--muted);font-size:.92rem}
+.stars{color:var(--accent);letter-spacing:2px;font-size:1.1rem}
+.hero-img{aspect-ratio:4/5;border-radius:24px;background:radial-gradient(circle at 60% 35%,var(--img1),var(--img2) 78%);
+  box-shadow:var(--shadow);position:relative;display:flex;align-items:center;justify-content:center}
+/* >>> EASY EDIT: real photo -> .hero-img{background:url('hero.jpg') center/cover;} */
+.hero-img .mono{font-size:5rem;color:#fff;opacity:.92}
+.badge-float{position:absolute;bottom:20px;left:-18px;background:#fff;border-radius:14px;padding:13px 18px;
+  box-shadow:var(--shadow);font-weight:700;color:var(--brand-dark);font-size:.88rem}
+.badge-float span{display:block;color:var(--muted);font-weight:600;font-size:.76rem}
+
+/* about split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:78px 0}
+.split-img{aspect-ratio:5/4;border-radius:24px;background:radial-gradient(circle at 40% 40%,var(--img1),var(--brand));
+  box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center}
+.split-img .mono{font-size:4.4rem;color:#fff;opacity:.92}
+.split h2{font-size:2.3rem;margin:8px 0 18px}
+.split p{color:var(--muted);margin-bottom:14px}
+
+/* value props */
+.values{background:var(--brand-dark);color:#fff;padding:74px 0}
+.values .eyebrow{color:#f0c98a}
+.values h2{color:#fff;font-size:2.2rem;margin:8px 0 40px}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.vcard{text-align:center}
+.vicon{width:74px;height:74px;border-radius:50%;background:rgba(224,122,95,.18);border:2px solid var(--accent);
+  margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#f3a78f}
+.vcard h3{color:#fff;font-size:1.15rem;margin-bottom:8px}
+.vcard p{color:#cfe0d5;font-size:.93rem}
+
+/* services */
+.services{padding:80px 0}
+.svc-head{text-align:center;margin-bottom:46px}
+.svc-head h2{font-size:2.4rem;margin-top:8px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border-radius:var(--radius);padding:30px 26px;box-shadow:0 8px 24px rgba(44,74,57,.07);border:2px solid transparent;transition:.18s}
+.card:hover{transform:translateY(-5px);border-color:#e6dcc8}
+.card .ic{font-size:2rem;margin-bottom:10px}
+.card h3{font-size:1.4rem;margin-bottom:6px}
+.card .price{color:var(--accent-d);font-weight:700;font-size:1.5rem;margin:10px 0 6px;font-family:var(--display)}
+.card p{color:var(--muted);font-size:.95rem;min-height:48px}
+.card .btn{margin-top:14px;width:100%;padding:12px}
+
+/* gallery */
+.gallery{background:var(--cream2);padding:78px 0}
+.gallery h2{text-align:center;font-size:2.3rem;margin-bottom:8px}
+.gallery .sub{text-align:center;color:var(--muted);margin-bottom:38px}
+.ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gtile{aspect-ratio:1;border-radius:14px;background:radial-gradient(circle at 50% 40%,var(--img1),var(--img2));
+  display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;opacity:.92;transition:.18s}
+.gtile:hover{transform:scale(1.03)}
+/* >>> EASY EDIT: replace each .gtile background with url('photo.jpg') center/cover */
+@media(max-width:760px){.ggrid{grid-template-columns:1fr 1fr}}
+
+/* location / hours */
+.locate{padding:78px 0}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.loc-card{background:#fff;border-radius:var(--radius);padding:36px;box-shadow:0 8px 24px rgba(44,74,57,.07)}
+.loc-card h3{font-size:1.6rem;margin-bottom:16px}
+.loc-card .line{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #f0e8d8;color:var(--ink)}
+.loc-card .line b{color:var(--brand-dark);min-width:84px;display:inline-block}
+.loc-map{border-radius:var(--radius);background:repeating-linear-gradient(45deg,#e7efe8,#e7efe8 14px,#dfe9e1 14px,#dfe9e1 28px);
+  display:flex;align-items:center;justify-content:center;min-height:300px;color:var(--brand2);font-weight:700;
+  border:1px solid #d8e3da}
+/* >>> EASY EDIT: replace .loc-map with a Google Maps <iframe> embed */
+
+/* testimonials */
+.testi{background:var(--brand-dark);color:#fff;padding:78px 0}
+.testi h2{text-align:center;font-size:2.3rem;margin-bottom:40px;color:#fff}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px}
+.tcard .stars{font-size:1rem;margin-bottom:12px}
+.tcard p{font-style:italic;color:#eef4ef;margin-bottom:14px;font-size:.97rem}
+.tcard b{color:#f0c98a}
+
+/* final CTA */
+.final{text-align:center;padding:84px 24px;background:
+  linear-gradient(rgba(44,74,57,.74),rgba(44,74,57,.74)),radial-gradient(circle at 30% 20%,var(--img2),var(--brand-dark));
+  color:#fff}
+.final h2{color:#fff;font-size:2.6rem;margin-bottom:16px}
+.final p{max-width:54ch;margin:0 auto 28px;opacity:.94;font-size:1.12rem}
+
+/* footer */
+footer{background:#21382c;color:#bdd0c4;padding:56px 0 28px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;margin-bottom:34px}
+footer h4{color:#fff;font-size:.95rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+footer a{color:#bdd0c4;display:block;padding:4px 0;font-size:.92rem}
+footer a:hover{color:#f0c98a}
+.flogo{font-family:var(--display);font-size:1.5rem;color:#fff;margin-bottom:10px}
+.fbottom{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;text-align:center;font-size:.82rem;color:#8ba596}
+
+/* sticky mobile bar */
+.mobilebar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:55;background:#fff;box-shadow:0 -4px 20px rgba(0,0,0,.12);padding:10px;gap:10px}
+.mobilebar .btn{flex:1;padding:14px;font-size:.95rem}
+
+/* booking modal */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(28,46,36,.6);z-index:80;align-items:center;justify-content:center;padding:18px}
+.modal-bg.open{display:flex}
+.modal{background:#fff;border-radius:22px;max-width:450px;width:100%;padding:34px;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.35);max-height:92vh;overflow:auto}
+.modal h3{font-size:1.7rem;margin-bottom:4px}
+.modal p.lead{color:var(--muted);margin-bottom:16px}
+.modal label{display:block;font-size:.84rem;font-weight:700;color:var(--brand-dark);margin:12px 0 5px}
+.modal input,.modal select{width:100%;padding:13px;border:1.5px solid #e3ddcf;border-radius:10px;font-size:1rem;font-family:inherit}
+.modal input:focus,.modal select:focus{outline:none;border-color:var(--brand)}
+.modal .btn{width:100%;margin-top:20px}
+.close{position:absolute;top:14px;right:18px;font-size:1.7rem;cursor:pointer;color:var(--muted);background:none;border:none}
+.hp{position:absolute;left:-9999px}
+.success{display:none;text-align:center;padding:14px 0}
+.success.show{display:block}
+.success .ck{width:66px;height:66px;border-radius:50%;background:var(--brand);color:#fff;font-size:2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+
+@media(max-width:900px){
+  .hero-grid,.split,.loc-grid{grid-template-columns:1fr;gap:30px}
+  .hero h1{font-size:2.4rem}.hero-img{order:-1}
+  .vgrid,.cards,.tgrid{grid-template-columns:1fr 1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .mobilebar{display:flex}body{padding-bottom:70px}
+}
+@media(max-width:560px){.vgrid,.cards,.tgrid,.fgrid{grid-template-columns:1fr}.final h2{font-size:2rem}}
+</style>
+</head>
+<body>
+
+<!-- ===== announcement ===== -->
+<!-- EDIT: promo --><div class="announce">&#129466; <b>New clients:</b> $15 off your pup's first full groom &nbsp;&#183;&nbsp; <a href="#" onclick="openBooking();return false;">Book now</a></div>
+
+<!-- ===== header ===== -->
+<header>
+  <div class="wrap bar">
+    <!-- EDIT: name --><div class="logo">Salty <span class="paw">Paws</span></div>
+    <nav class="main">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <button class="btn btn-cta" onclick="openBooking()">Book Appointment</button>
+    <button class="burger" onclick="document.querySelector('nav.main').scrollIntoView()">&#9776;</button>
+  </div>
+</header>
+
+<!-- ===== hero ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <!-- EDIT: award/badge -->
+      <div class="badge"><div class="seal">&#9733;</div><span>Voted Best Groomer<small>Bay County · 2024 &amp; 2025</small></span></div>
+      <h1 class="serif">Boutique grooming your dog will actually love</h1>
+      <div class="lead">A calm, private studio — never a crowded kennel.</div>
+      <p class="body">By appointment only, so your pup gets our full attention from start to finish. All breeds, all sizes, all the gentle care in the world.</p>
+      <div class="hero-cta">
+        <button class="btn btn-cta" onclick="openBooking()">Book an Appointment</button>
+        <a class="btn btn-green" href="#services">See Services</a>
+      </div>
+      <div class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>5.0 &#183; 300+ happy pups</span></div>
+    </div>
+    <div class="hero-img">
+      <div class="mono">&#128054;</div>
+      <div class="badge-float">&#9733; Appointment-only<span>Calm, one-on-one care</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== about ===== -->
+<section class="wrap split" id="about">
+  <div class="split-img"><div class="mono">&#128062;</div></div>
+  <div>
+    <div class="eyebrow">Welcome</div>
+    <h2 class="serif">A private studio-salon for your pet</h2>
+    <!-- EDIT: about copy -->
+    <p>Salty Paws is a private, appointment-only grooming studio in Panama City Beach. We keep things quiet and unhurried — rarely more than a pup or two in the studio at once — so every dog gets calm, focused, one-on-one attention.</p>
+    <p>We care for all sizes and breeds and specialize in finding the perfect "style" for your pet. Most visits take under two hours. Come see why local dogs (and their humans) love us.</p>
+    <a class="btn btn-green" href="#services" style="margin-top:8px">Our Services</a>
+  </div>
+</section>
+
+<!-- ===== value props ===== -->
+<section class="values">
+  <div class="wrap center">
+    <div class="eyebrow">The Salty Paws Difference</div>
+    <h2 class="serif">Grooming, the gentle way</h2>
+    <div class="vgrid">
+      <!-- EDIT: pillars -->
+      <div class="vcard"><div class="vicon">&#128062;</div><h3>One-on-One Care</h3><p>Appointment-only means no crowded cages and no rushed cuts.</p></div>
+      <div class="vcard"><div class="vicon">&#9733;</div><h3>All Breeds &amp; Sizes</h3><p>From tiny pups to big fluffballs — every coat, every style.</p></div>
+      <div class="vcard"><div class="vicon">&#128150;</div><h3>Low-Stress</h3><p>A quiet, calm studio designed to keep nervous pets at ease.</p></div>
+      <div class="vcard"><div class="vicon">&#9201;</div><h3>In &amp; Out</h3><p>Most grooms are done in under two hours — no all-day stays.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== services ===== -->
+<section class="services wrap" id="services">
+  <div class="svc-head">
+    <div class="eyebrow">Our Services</div>
+    <h2 class="serif">Pamper your pup</h2>
+    <p style="color:var(--muted);max-width:54ch;margin:8px auto 0">Pricing starts here and varies by breed, coat, and size — we'll confirm at booking.</p>
+  </div>
+  <div class="cards">
+    <!-- EDIT: services + prices -->
+    <div class="card"><div class="ic">&#9986;</div><h3 class="serif">Full Groom</h3><p>Bath, haircut, blow-dry, nails, ears &amp; a finishing bow or bandana.</p><div class="price">from $65</div><button class="btn btn-cta" onclick="openBooking('Full Groom')">Book Full Groom</button></div>
+    <div class="card"><div class="ic">&#128704;</div><h3 class="serif">Bath &amp; Tidy</h3><p>Warm bath, brush-out, nail trim, and a light tidy of face &amp; paws.</p><div class="price">from $40</div><button class="btn btn-cta" onclick="openBooking('Bath &amp; Tidy')">Book Bath</button></div>
+    <div class="card"><div class="ic">&#10084;</div><h3 class="serif">Add-Ons</h3><p>Nail trim, de-shed treatment, teeth brushing, or a spa-scented finish.</p><div class="price">from $12</div><button class="btn btn-cta" onclick="openBooking('Add-Ons')">Add to Visit</button></div>
+  </div>
+</section>
+
+<!-- ===== gallery ===== -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <h2 class="serif">Haircuts we love</h2>
+    <p class="sub">A few of our recent happy clients.</p>
+    <!-- EDIT: replace tiles with real photos -->
+    <div class="ggrid">
+      <div class="gtile">&#128054;</div><div class="gtile">&#128021;</div><div class="gtile">&#129423;</div><div class="gtile">&#128062;</div>
+      <div class="gtile">&#128021;</div><div class="gtile">&#128054;</div><div class="gtile">&#128062;</div><div class="gtile">&#129423;</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== location / hours ===== -->
+<section class="locate wrap" id="visit">
+  <div class="svc-head" style="text-align:center;margin-bottom:38px">
+    <div class="eyebrow">Find Us</div>
+    <h2 class="serif" style="font-size:2.4rem;margin-top:8px">Visit the studio</h2>
+  </div>
+  <div class="loc-grid">
+    <div class="loc-card">
+      <h3 class="serif">Salty Paws Pet Grooming</h3>
+      <!-- EDIT: real address, phone, hours -->
+      <div class="line"><b>Call/Text</b><span>(850) 555-1234</span></div>
+      <div class="line"><b>Address</b><span>123 Front Beach Rd, Panama City Beach, FL 32413</span></div>
+      <div class="line"><b>Hours</b><span>Tue–Sat 9:30am–5pm &#183; extra hours by appointment</span></div>
+      <div class="line" style="border:none"><b>Parking</b><span>Free lot out front — easy drop-off</span></div>
+      <button class="btn btn-cta" style="margin-top:18px;width:100%" onclick="openBooking()">Book an Appointment</button>
+    </div>
+    <div class="loc-map">Map &amp; directions</div>
+  </div>
+</section>
+
+<!-- ===== testimonials ===== -->
+<section class="testi" id="reviews">
+  <div class="wrap">
+    <h2 class="serif">Tails of happy clients</h2>
+    <div class="tgrid">
+      <!-- EDIT: real reviews -->
+      <div class="tcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"My anxious rescue is usually a nightmare at the groomer — here he was calm and came out looking adorable. We found our place."</p><b>— Brittany &amp; Cooper</b></div>
+      <div class="tcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The private studio makes such a difference. No barking chaos, just gentle care. Best cut my doodle has ever had."</p><b>— Marcus &amp; Luna</b></div>
+      <div class="tcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Booking online was so easy and they were done in 90 minutes. My pup smells amazing and the bow is the cutest."</p><b>— Ashley &amp; Biscuit</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== final CTA ===== -->
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#f0c98a">Ready When You Are</div>
+    <h2 class="serif" style="margin-top:10px">Treat your pup today</h2>
+    <p>Spots fill up fast, especially on weekends. Book your appointment now and claim $15 off your first full groom.</p>
+    <button class="btn btn-cta" onclick="openBooking()">Book an Appointment</button>
+  </div>
+</section>
+
+<!-- ===== footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <!-- EDIT: name, blurb, phone -->
+        <div class="flogo">Salty Paws</div>
+        <p style="font-size:.9rem">A private, appointment-only pet grooming studio in Panama City Beach, FL.</p>
+        <p style="margin-top:10px"><a href="tel:+18505551234">&#9742; (850) 555-1234</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Full Groom</a><a href="#services">Bath &amp; Tidy</a><a href="#services">Add-Ons</a>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <a href="#about">About</a><a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a><a href="#" onclick="openBooking();return false;">Book Now</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p style="font-size:.9rem">123 Front Beach Rd<br>Panama City Beach, FL</p>
+        <p style="font-size:.9rem;margin-top:8px">Tue–Sat 9:30a–5p</p>
+        <p style="margin-top:8px"><a href="#">Instagram @saltypawspcb</a></p>
+      </div>
+    </div>
+    <div class="fbottom">© 2026 Salty Paws Pet Grooming &#183; Site by Coastal Unicorn &#127754;</div>
+  </div>
+</footer>
+
+<!-- ===== sticky mobile bar ===== -->
+<div class="mobilebar">
+  <a class="btn btn-green" href="tel:+18505551234">&#9742; Call</a>
+  <button class="btn btn-cta" onclick="openBooking()">Book Now</button>
+</div>
+
+<!-- ===== booking modal ===== -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <button class="close" onclick="closeBooking()">&times;</button>
+    <div id="formView">
+      <h3 class="serif">Book an appointment</h3>
+      <p class="lead">Tell us about your pup and we'll text you to confirm a time.</p>
+      <form id="bookForm" onsubmit="return submitBooking(event)">
+        <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off">
+        <label>Your name</label>
+        <input type="text" name="name" required placeholder="Your name">
+        <label>Mobile number</label>
+        <input type="tel" name="phone" required placeholder="(850) 555-1234">
+        <label>Service</label>
+        <select name="service" id="serviceField">
+          <option>Full Groom</option>
+          <option>Bath &amp; Tidy</option>
+          <option>Add-Ons</option>
+          <option>Not sure yet</option>
+        </select>
+        <label>Dog's name &amp; breed</label>
+        <input type="text" name="pet" placeholder="e.g. Cooper, goldendoodle">
+        <label>Preferred day</label>
+        <input type="date" name="date">
+        <button type="submit" class="btn btn-cta">Request My Time</button>
+      </form>
+    </div>
+    <div class="success" id="successView">
+      <div class="ck">&#10003;</div>
+      <h3 class="serif">You're on the list!</h3>
+      <p style="color:var(--muted);margin-top:8px">We'll text you shortly to confirm. Can't wait to meet your pup &#128054;</p>
+      <button class="btn btn-cta" style="margin-top:18px" onclick="closeBooking()">Done</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   >>> GO LIVE: demo shows a success message. To make real:
+   point the button at the client's booking link, or POST the form
+   to their booking tool inside submitBooking().
+   >>> ADS: add Meta Pixel/Google tag in <head>; fire "Lead" on submit.
+   ============================================================ */
+var modal=document.getElementById('modalBg');
+function openBooking(service){
+  if(service){var s=document.getElementById('serviceField');
+    [...s.options].forEach(o=>{if(o.text.toLowerCase().startsWith(service.toLowerCase().slice(0,4)))s.value=o.text;});}
+  modal.classList.add('open');
+  document.getElementById('formView').style.display='block';
+  document.getElementById('successView').classList.remove('show');
+}
+function closeBooking(){modal.classList.remove('open');document.getElementById('bookForm').reset();}
+modal.addEventListener('click',e=>{if(e.target===modal)closeBooking();});
+function submitBooking(e){
+  e.preventDefault();
+  if(e.target.company.value)return false;
+  document.getElementById('formView').style.display='none';
+  document.getElementById('successView').classList.add('show');
+  return false;
+}
+</script>
+</body>
+</html>
