@@ -150,6 +150,29 @@
   footer a:hover{color:var(--gold2);}
   .copy{border-top:1px solid var(--line);margin-top:34px;padding-top:18px;text-align:center;font-size:12.5px;color:#6a7d92;letter-spacing:1px;}
   @media(max-width:860px){.hero-text h1{font-size:42px;} .stitle h2{font-size:32px;} .strip span{font-size:18px;letter-spacing:4px;} .cbox h2{font-size:32px;}}
+
+  /* INTAKE FORM */
+  .intake{background:linear-gradient(180deg,var(--navy),var(--navy2));border-top:1px solid var(--line);}
+  .formwrap{max-width:840px;margin:0 auto;background:rgba(20,42,74,.55);border:1px solid var(--line);border-radius:20px;padding:46px 42px;}
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px;}
+  .field{display:flex;flex-direction:column;}
+  .field.full{grid-column:1 / -1;}
+  .field label{font-size:11.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold2);margin-bottom:8px;}
+  .field .req{color:var(--aqua);}
+  .field input,.field select,.field textarea{background:rgba(11,31,58,.75);border:1px solid var(--line);border-radius:8px;padding:13px 14px;color:#fff;font-family:'Montserrat',sans-serif;font-size:14.5px;width:100%;}
+  .field textarea{resize:vertical;min-height:96px;}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(199,160,90,.14);}
+  .field input::placeholder,.field textarea::placeholder{color:#6f819a;}
+  .field select option{background:var(--navy);color:#fff;}
+  .checks{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:2px;}
+  .check{display:flex;align-items:center;gap:9px;font-size:14px;color:#cdd8e6;cursor:pointer;}
+  .check input{width:17px;height:17px;accent-color:var(--gold);flex:none;}
+  .fsub{grid-column:1 / -1;margin-top:8px;}
+  .fsub .btn{width:100%;justify-content:center;font-size:14px;padding:17px 30px;}
+  .formnote{text-align:center;font-size:13px;color:var(--muted);margin-top:18px;}
+  .formnote a{color:var(--gold2);font-weight:600;}
+  .hp{position:absolute;left:-9999px;}
+  @media(max-width:700px){.fgrid{grid-template-columns:1fr;} .formwrap{padding:30px 22px;}}
 </style>
 </head>
 <body>
@@ -162,7 +185,7 @@
       <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#process">Process</a>
-      <a href="https://calendar.app.google/uJRzm8ayiA19cbyP6" target="_blank" rel="noopener" class="cta"><span class="btn" style="padding:10px 20px;">Book a Call</span></a>
+      <a href="#intake" class="cta"><span class="btn" style="padding:10px 20px;">Book a Consult</span></a>
     </div>
   </div>
 </nav>
@@ -174,7 +197,7 @@
       <h1>Your business deserves <span class="teal-t">more</span> than just a website.</h1>
       <p class="sub">We build brands, websites, and AI automations that help small businesses attract more customers &mdash; and spend less time on repetitive work.</p>
       <div class="hero-cta">
-        <a href="https://calendar.app.google/uJRzm8ayiA19cbyP6" target="_blank" rel="noopener" class="btn">Book a Free Strategy Call &rarr;</a>
+        <a href="#intake" class="btn">Book a Free Consult &rarr;</a>
         <a href="#work" class="btn btn-ghost">View Our Work &rarr;</a>
       </div>
     </div>
@@ -270,7 +293,7 @@
       <h2>Simple from day one</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">1</div><h4>Free Strategy Call</h4><p>We learn your business and map exactly what you need &mdash; no cost, no pressure.</p></div>
+      <div class="step"><div class="n">1</div><h4>Free Consult</h4><p>We learn your business and map exactly what you need &mdash; no cost, no pressure.</p></div>
       <div class="step"><div class="n">2</div><h4>We Build It</h4><p>Brand, website, booking, and automations &mdash; done for you, often within days.</p></div>
       <div class="step"><div class="n">3</div><h4>You Grow</h4><p>Customers book themselves, follow-ups run automatically, and we keep it optimized.</p></div>
     </div>
@@ -346,7 +369,7 @@
         <div class="price gold-grad">$99</div>
         <div class="desc">A one-page site to get online fast.</div>
         <ul><li>1-page mobile site</li><li>Tap-to-call &amp; directions</li><li>Booking link added</li><li>Live in a day</li></ul>
-        <a href="https://calendar.app.google/uJRzm8ayiA19cbyP6" target="_blank" rel="noopener" class="btn btn-ghost">Start Here</a>
+        <a href="#intake" class="btn btn-ghost">Start Here</a>
       </div>
       <div class="tier feat">
         <span class="badge">Most Popular</span>
@@ -354,18 +377,246 @@
         <div class="price gold-grad">$497</div>
         <div class="desc">Brand polish + website + booking + automation.</div>
         <ul><li>Multi-page website</li><li>Online booking system</li><li>Instant replies &amp; reminders</li><li>Social profile design</li></ul>
-        <a href="https://calendar.app.google/uJRzm8ayiA19cbyP6" target="_blank" rel="noopener" class="btn">Get Started</a>
+        <a href="#intake" class="btn">Get Started</a>
       </div>
       <div class="tier">
         <h3>Website</h3>
         <div class="price gold-grad">$297</div>
         <div class="desc">A real web presence, done right.</div>
         <ul><li>Up to 3 pages</li><li>Mobile-friendly &amp; fast</li><li>Your own domain</li><li>Contact &amp; booking</li></ul>
-        <a href="https://calendar.app.google/uJRzm8ayiA19cbyP6" target="_blank" rel="noopener" class="btn btn-ghost">Choose Website</a>
+        <a href="#intake" class="btn btn-ghost">Choose Website</a>
       </div>
     </div>
     <div class="addon"><b>Add-ons:</b> Full branding package &middot; Get on Google +$249 &middot; AI automations from +$199 &nbsp;|&nbsp; <b>Care plan</b> from $59/mo</div>
   </div>
 </section>
 
-<section class="contact" id="contact
+<section class="intake" id="intake">
+  <div class="wrap">
+    <div class="stitle">
+      <span class="eyebrow">Step 1 of 2</span>
+      <h2>Tell us about your project</h2>
+      <p>Answer a few quick questions so your consult is productive from minute one. Takes about 2 minutes &mdash; then you'll pick your time.</p>
+    </div>
+
+    <div class="formwrap">
+      <form name="consult-intake" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <input type="hidden" name="form-name" value="consult-intake">
+        <p class="hp"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+        <div class="fgrid">
+
+          <div class="field">
+            <label for="name">Your name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="jane@business.com" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(850) 555-0123" required>
+          </div>
+
+          <div class="field">
+            <label for="business">Business name</label>
+            <input type="text" id="business" name="business" placeholder="Coastal Lash Studio">
+          </div>
+
+          <div class="field full">
+            <label for="what-you-do">What does your business do? <span class="req">*</span></label>
+            <input type="text" id="what-you-do" name="what-you-do" placeholder="e.g. Lash studio in Panama City Beach — lash extensions & brow services" required>
+          </div>
+
+          <div class="field">
+            <label for="current-website">Do you have a website now?</label>
+            <select id="current-website" name="current-website">
+              <option value="">Select one…</option>
+              <option>No website at all</option>
+              <option>Only social media (IG/Facebook)</option>
+              <option>Yes, but it needs a rebuild</option>
+              <option>Yes, and I just need updates</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="domain">Do you have a domain name?</label>
+            <select id="domain" name="domain">
+              <option value="">Select one…</option>
+              <option>Yes, I already own my domain</option>
+              <option>No, I need help getting one</option>
+              <option>I'm not sure</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="website-type">What type of website do you need?</label>
+            <select id="website-type" name="website-type">
+              <option value="">Select one…</option>
+              <option>One-page site (Smart Site)</option>
+              <option>Multi-page site (up to 3 pages)</option>
+              <option>Full setup: brand + site + automation</option>
+              <option>Online store / e-commerce</option>
+              <option>Not sure — help me decide</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="branding">Where are you with branding?</label>
+            <select id="branding" name="branding">
+              <option value="">Select one…</option>
+              <option>I need a logo & brand from scratch</option>
+              <option>I have a logo but it needs a refresh</option>
+              <option>My branding is done — just need the site</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="booking">Do you need online booking?</label>
+            <select id="booking" name="booking">
+              <option value="">Select one…</option>
+              <option>Yes — customers should book themselves</option>
+              <option>No — I just need contact/inquiry</option>
+              <option>Maybe, tell me more</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="google-profile">Are you on Google Business Profile?</label>
+            <select id="google-profile" name="google-profile">
+              <option value="">Select one…</option>
+              <option>Yes, it's set up and verified</option>
+              <option>No, I need to get on Google</option>
+              <option>I'm not sure</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label>Which automations interest you?</label>
+            <div class="checks">
+              <label class="check"><input type="checkbox" name="automations" value="Instant replies to DMs/texts"> Instant replies</label>
+              <label class="check"><input type="checkbox" name="automations" value="Appointment reminders"> Appointment reminders</label>
+              <label class="check"><input type="checkbox" name="automations" value="Lead follow-up sequences"> Lead follow-up</label>
+              <label class="check"><input type="checkbox" name="automations" value="Review requests"> Review requests</label>
+              <label class="check"><input type="checkbox" name="automations" value="Rebooking reminders"> Rebooking</label>
+              <label class="check"><input type="checkbox" name="automations" value="Not sure yet"> Not sure yet</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="find-you">How do customers find you today?</label>
+            <select id="find-you" name="find-you">
+              <option value="">Select one…</option>
+              <option>Instagram</option>
+              <option>Facebook</option>
+              <option>Word of mouth / referrals</option>
+              <option>Google search</option>
+              <option>Walk-ins</option>
+              <option>They mostly don't — that's the problem</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="timeline">How soon do you want to launch?</label>
+            <select id="timeline" name="timeline">
+              <option value="">Select one…</option>
+              <option>ASAP — this week</option>
+              <option>Within 2–4 weeks</option>
+              <option>1–3 months</option>
+              <option>Just exploring for now</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="budget">Which package fits your budget?</label>
+            <select id="budget" name="budget">
+              <option value="">Select one…</option>
+              <option>Smart Site — $99</option>
+              <option>Website — $297</option>
+              <option>Complete Setup — $497</option>
+              <option>Not sure — recommend something</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="heard">How did you hear about us?</label>
+            <select id="heard" name="heard">
+              <option value="">Select one…</option>
+              <option>Facebook group</option>
+              <option>Instagram</option>
+              <option>Google search</option>
+              <option>Referral from a friend</option>
+              <option>Saw one of your client sites</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="goals">What's the #1 thing you want this to fix?</label>
+            <textarea id="goals" name="goals" placeholder="e.g. I'm losing customers because I can't keep up with DMs, and I want people to be able to book themselves."></textarea>
+          </div>
+
+          <div class="fsub">
+            <button type="submit" class="btn">Submit &amp; Pick My Time &rarr;</button>
+          </div>
+
+        </div>
+      </form>
+      <p class="formnote">We reply within 1 business day. Prefer to talk now? Call or text <a href="tel:+18503298883">(850) 329-8883</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cbox">
+      <span class="eyebrow">Let's Build Something</span>
+      <h2>Ready to stand out?</h2>
+      <p>Book a free consult and we'll show you exactly what your brand, website, and automation could look like &mdash; no commitment.</p>
+      <div class="row">
+        <a href="#intake" class="btn">Book a Free Consult &rarr;</a>
+        <a href="tel:+18503298883" class="btn btn-ghost">Call / Text (850) 329-8883</a>
+      </div>
+      <div class="em">Or email us: <a href="mailto:hello@coastalunicorn.com">hello@coastalunicorn.com</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div class="col">
+        <h4>Coastal Unicorn</h4>
+        <p>Brands, websites &amp; AI automation for Gulf Coast small businesses.</p>
+        <p>Panama City, FL</p>
+      </div>
+      <div class="col">
+        <h4>Services</h4>
+        <a href="#services">Branding</a>
+        <a href="#services">Websites</a>
+        <a href="#services">AI Automation</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="col">
+        <h4>Company</h4>
+        <a href="#about">About</a>
+        <a href="#work">Our Work</a>
+        <a href="#process">Process</a>
+        <a href="#intake">Book a Consult</a>
+      </div>
+      <div class="col">
+        <h4>Get in Touch</h4>
+        <a href="tel:+18503298883">(850) 329-8883</a>
+        <a href="mailto:hello@coastalunicorn.com">hello@coastalunicorn.com</a>
+        <a href="#intake">Free Consult &rarr;</a>
+      </div>
+    </div>
+    <div class="copy">&copy; 2026 Coastal Unicorn &middot; Build. Grow. Automate.</div>
+  </div>
+</footer>
+
+</body>
+</html>
