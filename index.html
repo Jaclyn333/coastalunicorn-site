@@ -172,6 +172,12 @@
   .formnote{text-align:center;font-size:13px;color:var(--muted);margin-top:18px;}
   .formnote a{color:var(--gold2);font-weight:600;}
   .hp{position:absolute;left:-9999px;}
+  .field .opt{color:var(--muted);font-weight:600;letter-spacing:.6px;text-transform:none;}
+  .sms-consent[hidden]{display:none;}
+  .sms-consent{background:rgba(199,160,90,.06);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
+  .sms-check{align-items:flex-start;gap:12px;line-height:1.55;}
+  .sms-check input{margin-top:3px;}
+  .sms-check span{font-size:13.5px;color:#cdd8e6;}
   @media(max-width:700px){.fgrid{grid-template-columns:1fr;} .formwrap{padding:30px 22px;}}
 </style>
 </head>
@@ -417,13 +423,20 @@
           </div>
 
           <div class="field">
-            <label for="phone">Phone <span class="req">*</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="(850) 555-0123" required>
+            <label for="phone">Phone <span class="opt">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(850) 555-0123" autocomplete="tel">
           </div>
 
           <div class="field">
             <label for="business">Business name</label>
             <input type="text" id="business" name="business" placeholder="Coastal Lash Studio">
+          </div>
+
+          <div class="field full sms-consent" id="smsConsent" hidden>
+            <label class="check sms-check">
+              <input type="checkbox" id="smsOptIn" name="sms-consent" value="Yes — opted in to SMS">
+              <span>Yes, text me at this number about my consult. I agree to receive SMS messages from Coastal Unicorn. Message &amp; data rates may apply. Reply STOP to opt out at any time.</span>
+            </label>
           </div>
 
           <div class="field full">
@@ -568,6 +581,29 @@
       <p class="formnote">We reply within 1 business day. Prefer to talk now? Call or text <a href="tel:+18503298883">(850) 329-8883</a></p>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var phone = document.getElementById('phone');
+      var consent = document.getElementById('smsConsent');
+      var optIn = document.getElementById('smsOptIn');
+      if (!phone || !consent || !optIn) return;
+
+      function sync() {
+        var hasNumber = phone.value.replace(/\D/g, '').length > 0;
+        if (hasNumber) {
+          consent.hidden = false;
+        } else {
+          consent.hidden = true;
+          optIn.checked = false;
+        }
+      }
+
+      phone.addEventListener('input', sync);
+      phone.addEventListener('change', sync);
+      sync();
+    })();
+  </script>
 </section>
 
 <section class="contact" id="contact">
