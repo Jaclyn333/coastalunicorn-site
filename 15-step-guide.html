@@ -5,42 +5,75 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free 15-Step Guide — Coastal Unicorn</title>
 <meta name="description" content="Grab the free 15-Step Guide to starting a business that looks legit, gets found, and books clients while you sleep.">
+<meta name="theme-color" content="#0F2D5C">
+<link rel="icon" type="image/png" href="coastal-unicorn-logo-v2.png">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script async src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=TN84fm"></script>
 <style>
-  :root{--navy:#0F2D5C;--purple:#6D4AFF;--ocean:#4DA8FF;--aqua:#4FE3D6;--white:#FFFFFF;--charcoal:#333333;}
+  :root{
+    --navy:#0F2D5C;--purple:#6D4AFF;--purple-d:#5A38E8;--ocean:#4DA8FF;--aqua:#4FE3D6;
+    --white:#FFFFFF;--charcoal:#333333;--muted:#5A6577;--cloud:#F6F7FB;--sky:#E9F3FF;--border:#E6E8F0;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:Arial,Helvetica,sans-serif;color:var(--charcoal);background:var(--white);}
-  .hero{background:linear-gradient(135deg,var(--navy) 0%,#1A4380 60%,var(--ocean) 130%);color:var(--white);text-align:center;padding:72px 24px 96px;position:relative;overflow:hidden;}
-  .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;border:2px solid rgba(79,227,214,.25);top:-200px;right:-160px;}
-  .hero::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;border:2px solid rgba(79,227,214,.35);bottom:-140px;left:-100px;}
-  .kicker{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--aqua);margin-bottom:22px;}
-  h1{font-size:clamp(34px,6vw,56px);line-height:1.1;max-width:760px;margin:0 auto;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--charcoal);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.serif{font-family:'Fraunces','Georgia',serif;font-optical-sizing:auto;letter-spacing:-.015em;line-height:1.1;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,#173A70 58%,var(--ocean) 135%);color:var(--white);text-align:center;padding:64px 24px 92px;position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;border:1px solid rgba(79,227,214,.22);top:-200px;right:-160px;}
+  .hero::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;border:1px solid rgba(79,227,214,.3);bottom:-140px;left:-100px;}
+  .hero .inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;}
+  .brandcard{background:#fff;border-radius:22px;padding:20px;box-shadow:0 22px 50px rgba(7,20,40,.4);margin-bottom:30px;}
+  .brandcard img{width:200px;height:auto;}
+  .kicker{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:var(--aqua);font-weight:600;margin-bottom:18px;}
+  h1{font-size:clamp(34px,6vw,58px);font-weight:600;max-width:14ch;margin:0 auto;text-wrap:balance;}
   h1 em{font-style:italic;color:var(--aqua);}
-  .hero p{font-size:18px;line-height:1.6;max-width:600px;margin:24px auto 0;color:rgba(255,255,255,.9);}
-  .form-wrap{max-width:520px;margin:-48px auto 0;padding:0 20px;position:relative;z-index:2;}
-  .form-card{background:var(--white);border-radius:18px;box-shadow:0 18px 50px rgba(15,45,92,.18);padding:12px;}
-  .phases{max-width:960px;margin:72px auto 0;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
-  .phase{border:1px solid #E3ECFA;border-radius:16px;padding:28px;}
-  .phase .n{font-size:34px;font-weight:bold;color:var(--ocean);}
+  .hero p{font-size:clamp(16px,1.5vw,18.5px);line-height:1.6;max-width:56ch;margin:22px auto 0;color:rgba(255,255,255,.9);}
+
+  .form-wrap{max-width:540px;margin:-48px auto 0;padding:0 20px;position:relative;z-index:3;}
+  .form-card{background:var(--white);border:1px solid var(--border);border-radius:20px;box-shadow:0 26px 60px -24px rgba(15,45,92,.4);padding:14px;}
+
+  .phases{max-width:980px;margin:76px auto 0;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .phase{border:1px solid var(--border);border-radius:18px;padding:32px 28px;background:#fff;box-shadow:0 2px 10px rgba(15,45,92,.05);transition:transform .3s var(--ease),box-shadow .3s,border-color .3s;}
+  .phase:hover{transform:translateY(-6px);box-shadow:0 26px 54px -24px rgba(15,45,92,.26);border-color:#d9d4ff;}
+  .phase .n{font-family:'Fraunces',serif;font-size:40px;font-weight:600;color:var(--ocean);line-height:1;}
   .phase.alt .n{color:var(--purple);}
-  .phase h3{color:var(--navy);font-size:22px;margin:10px 0 8px;}
-  .phase p{font-size:15px;line-height:1.6;}
-  .strip{text-align:center;margin:72px 0 0;background:#EDF4FE;padding:56px 24px;}
-  .strip h2{color:var(--navy);font-size:28px;}
+  .phase h3{color:var(--navy);font-size:24px;font-weight:600;margin:12px 0 8px;}
+  .phase p{font-size:15px;line-height:1.65;color:var(--muted);}
+  @media(max-width:760px){.phases{grid-template-columns:1fr;max-width:440px;}}
+
+  .strip{text-align:center;margin:76px 0 0;background:var(--sky);padding:64px 24px;}
+  .strip h2{color:var(--navy);font-size:clamp(26px,3.6vw,36px);font-weight:600;}
   .strip h2 em{color:var(--purple);font-style:italic;}
-  .strip p{max-width:560px;margin:14px auto 0;font-size:16px;line-height:1.6;}
-  .strip a.btn{display:inline-block;margin-top:26px;background:var(--purple);color:#fff;font-weight:bold;text-decoration:none;padding:15px 36px;border-radius:100px;}
-  footer{background:var(--navy);color:rgba(255,255,255,.85);text-align:center;padding:36px 24px;margin-top:0;font-size:13px;}
-  footer .tag{letter-spacing:3px;text-transform:uppercase;color:var(--aqua);font-size:11px;margin-bottom:10px;}
-  footer a{color:#fff;}
+  .strip p{max-width:60ch;margin:16px auto 0;font-size:16px;line-height:1.65;color:var(--muted);}
+  .strip a.btn{display:inline-flex;align-items:center;gap:9px;margin-top:28px;background:var(--purple);color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:15px 34px;border-radius:12px;box-shadow:0 12px 26px -12px rgba(109,74,255,.6);transition:transform .25s var(--ease),background .2s;}
+  .strip a.btn:hover{background:var(--purple-d);transform:translateY(-2px);}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.85);text-align:center;padding:40px 24px;font-size:13px;}
+  footer .tag{letter-spacing:2.6px;text-transform:uppercase;color:var(--aqua);font-size:11px;font-weight:600;margin-bottom:10px;}
+  footer a{color:#fff;font-weight:500;}
+
+  .reveal{opacity:1;}
+  .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s);}
+  .js .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.js .reveal{opacity:1;transform:none;transition:none;}}
 </style>
 </head>
 <body>
 
 <section class="hero">
-  <div class="kicker">Free 15-Step Guide</div>
-  <h1>Build a business that <em>works.</em></h1>
-  <p>15 steps to start — and run — a business that looks legit, gets found, and books clients while you sleep. No fluff. Just the work that works.</p>
+  <div class="inner">
+    <div class="brandcard"><img src="coastal-unicorn-lockup.png" alt="Coastal Unicorn — Build. Grow. Automate."></div>
+    <div class="kicker">Free 15-Step Guide</div>
+    <h1>Build a business that <em>works.</em></h1>
+    <p>15 steps to start — and run — a business that looks legit, gets found, and books clients while you sleep. No fluff. Just the work that works.</p>
+  </div>
 </section>
 
 <div class="form-wrap">
@@ -51,21 +84,35 @@
 </div>
 
 <section class="phases">
-  <div class="phase"><div class="n">01</div><h3>Build.</h3><p>Get the foundation right: your strengths, your lane, your plan, and a structure that won't crack when things take off.</p></div>
-  <div class="phase alt"><div class="n">02</div><h3>Grow.</h3><p>Look like the business you're meant to be. Brand, presence, pricing, and marketing that turns strangers into booked clients.</p></div>
-  <div class="phase"><div class="n">03</div><h3>Automate.</h3><p>Run it like a pro. Systems for your time, your money, and your growth — so the business works even when you're off the clock.</p></div>
+  <div class="phase reveal"><div class="n">01</div><h3>Build.</h3><p>Get the foundation right: your strengths, your lane, your plan, and a structure that won't crack when things take off.</p></div>
+  <div class="phase alt reveal" style="--d:.1s"><div class="n">02</div><h3>Grow.</h3><p>Look like the business you're meant to be. Brand, presence, pricing, and marketing that turns strangers into booked clients.</p></div>
+  <div class="phase reveal" style="--d:.2s"><div class="n">03</div><h3>Automate.</h3><p>Run it like a pro. Systems for your time, your money, and your growth — so the business works even when you're off the clock.</p></div>
 </section>
 
 <section class="strip">
   <h2>We don't just make it pretty. <em>We make it work.</em></h2>
   <p>Brand, website, and AI automation for small businesses — built to book clients, answer every inquiry, and go live fast.</p>
-  <a class="btn" href="https://coastalunicorn.com">Explore Coastal Unicorn →</a>
+  <a class="btn" href="https://coastalunicorn.com">Explore Coastal Unicorn &rarr;</a>
 </section>
 
 <footer>
   <div class="tag">Build · Grow · Automate</div>
   <div><a href="https://coastalunicorn.com">coastalunicorn.com</a></div>
 </footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (window.matchMedia('(prefers-reduced-motion:reduce)').matches || !('IntersectionObserver' in window)) {
+      els.forEach(function (e) { e.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.14, rootMargin: '0px 0px -7% 0px' });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
 
 </body>
 </html>

@@ -1,0 +1,3 @@
+# Impeccable design-hook local artifacts (machine-local, not shared)
+.impeccable/hook.cache.json
+.impeccable/config.local.json
