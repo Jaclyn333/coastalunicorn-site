@@ -14,6 +14,16 @@
         "value": "inter",
         "createdAt": "2026-07-27T20:16:02.685Z",
         "reason": "User confirmed Inter is the intentional brand body font (July-2026 brand)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "15-step-guide.html",
+          "index.html"
+        ],
+        "createdAt": "2026-07-27T21:10:17.833Z",
+        "reason": "Both pages use only Fraunces + Inter, the user-confirmed July-2026 brand fonts; residual hit is the Google-Fonts link line"
       }
     ]
   }
